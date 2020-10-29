@@ -2,7 +2,7 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import HomeScreen from '../Screens/HomeScreen';
 import TrainStackNavigation from '../Navigations/TrainStackNavigation';
-import SchBStackNavigation from '../Navigations/SchoolBus/SchBTabNavigation';
+import SchoolBusStackNavigation from '../Navigations/SchoolBus/SchBTabNavigation';
 import ExpBStackNavigation from '../Navigations/ExpBStackNavigation';
 import CityBStackNavigation from '../Navigations/CityBStackNavigation';
 import SubwayStackNavigation from '../Navigations/SubwayStackNavigation';
@@ -19,7 +19,7 @@ function Home() {
       />
       <Stack.Screen
         name="스쿨버스"
-        component={SchBStackNavigation}
+        component={SchoolBusStackNavigation}
         options={{
           headerStyle: {
             backgroundColor: '#F9F9F9',

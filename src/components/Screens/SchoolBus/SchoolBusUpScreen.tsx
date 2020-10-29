@@ -27,7 +27,7 @@ function SchoolDownBus() {
 
   return (
     <SafeAreaView style={{flex: 1}}>
-      <ScrollView style={{flex: 1, padding: 24}}>
+      <ScrollView style={{flex: 1, padding: 10}}>
         {isLoading ? (
           <ActivityIndicator />
         ) : (
@@ -40,14 +40,13 @@ function SchoolDownBus() {
                   onPress={() => {
                     alert(item.startStationName);
                   }}>
-                  <View style={styles.StationInfo}>
-                    <Text style={styles.leftItem}>
+                  <View style={styles.Info}>
+                    <Text style={styles.timeItem}>{item.schedule} </Text>
+                  </View>
+                  <View style={styles.Info}>
+                    <Text style={styles.stationNameItem}>
                       {item.startStationName}{' '}
                     </Text>
-                    <Text style={styles.rightItem}>{item.endStationName}</Text>
-                  </View>
-                  <View style={styles.TimeInfo}>
-                    <Text style={styles.leftItem}>{item.schedule} </Text>
                   </View>
                 </TouchableOpacity>
               </View>
@@ -60,39 +59,31 @@ function SchoolDownBus() {
 }
 const styles = StyleSheet.create({
   itemView: {
-    // // flexDirection: '',
-    // borderRadius: 15,
-    // borderWidth: 0.5,
-    // backgroundColor: '#FFFFFF',
-    // width: '100%',
-    // height: '53',
-    // marginBottom: 10,
-    // // border: 0.5,
-    borderRadius: 25,
-    backgroundColor: '#C4C4C4',
-    width: 375,
-    height: 96,
-    marginBottom: 10,
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    borderRadius: 15,
+    backgroundColor: '#FFFFFF',
+    width: '100%',
+    height: '17%',
+    margin: 5,
   },
-  StationInfo: {
-    flexDirection: 'row',
-    alignItems: 'center',
+  Info: {
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    alignItems: 'stretch',
   },
-  TimeInfo: {
-    flexDirection: 'row',
-    alignItems: 'center',
+  stationNameItem: {
+    fontSize: 10,
+    paddingLeft: 29,
+    paddingTop: 1,
+    paddingBottom: 10,
+    color: '#979797',
   },
-  leftItem: {
-    fontSize: 30,
+  timeItem: {
+    fontSize: 19,
     fontWeight: 'bold',
     paddingLeft: 29,
-    paddingTop: 10,
-  },
-  rightItem: {
-    fontSize: 30,
-    fontWeight: 'bold',
-    paddingLeft: 200,
-    paddingRight: 21,
     paddingTop: 10,
   },
 });
