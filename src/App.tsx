@@ -2,8 +2,8 @@ import 'react-native-gesture-handler';
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Home from './components/TabScreen/Home';
-import Favorites from './components/TabScreen/Favorites';
+import Home from './components/Screens/TabScreen/Home';
+import Favorites from './components/Screens/TabScreen/Favorites';
 
 const Tab = createBottomTabNavigator();
 

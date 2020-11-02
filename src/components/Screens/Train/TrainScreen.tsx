@@ -1,12 +1,11 @@
-import React, {useState} from 'react';
-import {Button, SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import React from 'react';
+import {SafeAreaView, StyleSheet, View} from 'react-native';
 import InquiryButton from '../../Buttons/InquiryButton';
-import DatePicker from 'react-native-date-picker';
 import DestinationButton from '../../Buttons/DestinationButton';
+import TimeSelectOption from '../../SelectOptions/TimeSelect/TimeSelectOption';
+import WeekSelectGroup from '../../SelectOptions/WeekSelect/WeekSelectGroup';
 
 function TrainScreen({navigation}) {
-  // const [date, setDate] = useState(new Date());
-
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.card}>
@@ -15,20 +14,21 @@ function TrainScreen({navigation}) {
             buttonColor={'#FFF'}
             subtitle={'출발'}
             title={'평택'}
+            titleColor={'#000'}
             onPress={() => null}
           />
           <DestinationButton
             buttonColor={'#FFF'}
             subtitle={'도착'}
             title={'서울'}
-            onPress={() => alert('서울역')}
+            titleColor={'#0012AF'}
           />
         </View>
         <View style={styles.selectTime}>
-          <Text>출발시간선택 레이아웃</Text>
+          <TimeSelectOption />
         </View>
         <View style={styles.selectWeek}>
-          <Text>요일선택 레이아웃</Text>
+          <WeekSelectGroup />
         </View>
         <View style={styles.InquiryBtnSector}>
           <InquiryButton
@@ -37,7 +37,6 @@ function TrainScreen({navigation}) {
             onPress={() => navigation.navigate('기차시간표')}
           />
         </View>
-        {/*<DatePicker date={date} onDateChange={setDate} mode={'time'} />*/}
       </View>
     </SafeAreaView>
   );
@@ -48,6 +47,7 @@ export default TrainScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    padding: 10,
     backgroundColor: '#FCFCFC',
     alignItems: 'center',
   },
@@ -56,16 +56,17 @@ const styles = StyleSheet.create({
     borderColor: '#AAAAAA',
     borderRadius: 10,
     borderWidth: 0.5,
-    width: 350,
+    width: '85%',
     height: '70%',
-    top: 100,
+    top: '14%',
     justifyContent: 'flex-start',
     alignItems: 'center',
   },
   selectDest: {
     backgroundColor: '#FFF',
     width: '100%',
-    height: '35%',
+    // height: '35%',
+    flex: 3,
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
     justifyContent: 'center',
@@ -73,25 +74,34 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   selectTime: {
-    backgroundColor: 'blue',
+    backgroundColor: '#FFF',
     width: '100%',
-    height: '24%',
+    // height: '24%',
+    flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
+    borderColor: '#AAAAAA',
+    borderTopWidth: 0.5,
   },
   selectWeek: {
-    backgroundColor: 'green',
+    backgroundColor: '#FFF',
     width: '100%',
-    height: '24%',
+    // height: '24%',
+    flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
+    borderColor: '#AAAAAA',
+    borderTopWidth: 0.5,
   },
   InquiryBtnSector: {
     backgroundColor: '#FFFFFF',
     width: '100%',
-    height: '17%',
+    // height: '17%',
+    flex: 1.3,
     justifyContent: 'center',
     alignItems: 'center',
+    borderColor: '#AAAAAA',
+    borderTopWidth: 0.5,
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
   },

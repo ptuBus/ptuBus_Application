@@ -2,6 +2,7 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import TrainScreen from '../Screens/Train/TrainScreen';
 import TrainTimeTableScreen from '../Screens/Train/TrainTimeTableScreen';
+import DestinationSelectModal from '../SelectOptions/DestinationSelect/DestinationSelectModal';
 
 const Stack = createStackNavigator();
 

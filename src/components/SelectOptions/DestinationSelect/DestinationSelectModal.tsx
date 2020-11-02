@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, View, StyleSheet, TouchableOpacity, Text} from 'react-native';
+import {Button, View, Text, StyleSheet} from 'react-native';
 import Modal, {
   ModalTitle,
   ModalContent,
@@ -9,73 +9,52 @@ import Modal, {
   ScaleAnimation,
 } from 'react-native-modals';
 
-export default class DestinationButton extends Component {
-  static defaultProps = {
-    buttonColor: '#FFF',
-    title: 'untitled',
-    titleColor: '#0012AF',
-    subtitle: 'untitled',
-    onPress: () => null,
-  };
-
+export default class DestinationSelectModal extends Component {
   state = {
+    customBackgroundModal: false,
+    defaultAnimationModal: false,
+    swipeableModal: false,
+    scaleAnimationModal: false,
+    slideAnimationModal: false,
     bottomModalAndTitle: false,
+    bottomModal: false,
   };
-
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
-      <TouchableOpacity
-        style={[styles.button, {backgroundColor: this.props.buttonColor}]}
-        onPress={() => {
-          this.setState({
-            bottomModalAndTitle: true,
-          });
-        }}>
-        <Text style={styles.subtitle}>{this.props.subtitle}</Text>
-        <Text style={[styles.title, {color: this.props.titleColor}]}>
-          {this.props.title}
-        </Text>
+      <View style={{flex: 1}}>
+        <View style={styles.container}>
+          <Button
+            title="Bottom Modal with Title"
+            onPress={() => {
+              this.setState({
+                bottomModalAndTitle: true,
+              });
+            }}
+          />
+        </View>
 
         <Modal.BottomModal
           visible={this.state.bottomModalAndTitle}
           onTouchOutside={() => this.setState({bottomModalAndTitle: false})}
           height={0.5}
           width={1}
-          onSwipeOut={() => this.setState({bottomModalAndTitle: false})}>
+          onSwipeOut={() => this.setState({bottomModalAndTitle: false})}
+          modalTitle={<ModalTitle title="Bottom Modal" hasTitleBar />}>
           <ModalContent
             style={{
               flex: 1,
               backgroundColor: 'fff',
             }}>
-            <Text>Bottom Modal with Title</Text>
+            <Text>도착역검색</Text>
           </ModalContent>
         </Modal.BottomModal>
-      </TouchableOpacity>
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  button: {
-    width: '50%',
-    height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10,
-  },
-  title: {
-    fontSize: 30,
-    fontWeight: '500',
-  },
-  subtitle: {
-    top: '-25%',
-    color: '#8B8B8B',
-  },
   container: {
     flex: 1,
     alignItems: 'center',

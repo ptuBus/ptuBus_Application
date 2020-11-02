@@ -28,10 +28,9 @@ export default class InquiryButton extends Component {
 const styles = StyleSheet.create({
   button: {
     width: '95%',
-    height: '50%',
+    height: '55%',
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 10,
     borderRadius: 10,
   },
   title: {

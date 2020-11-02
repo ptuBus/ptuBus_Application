@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
-import CustomButtons from '../Buttons/TransportationButton';
-import TransportationButton from '../Buttons/TransportationButton';
+import CustomButtons from '../../Buttons/TransportationButton';
+import TransportationButton from '../../Buttons/TransportationButton';
 
 function HomeScreen({navigation}) {
   return (
