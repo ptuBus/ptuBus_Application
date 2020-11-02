@@ -1,14 +1,24 @@
 import React, {Component} from 'react';
-import {Alert, Button, StyleSheet, Text, View} from 'react-native';
+import {Alert, StyleSheet, Text, View} from 'react-native';
 import WeekButton from '../../Buttons/WeekButton';
-import InquiryButton from '../../Buttons/InquiryButton';
 
 export default class WeekSelectGroup extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.toptext}>요일선택</Text>
-        <Text style={styles.buttongroup}>요일선택 버튼그룹</Text>
+        {/*<Text style={styles.toptext}>요일선택</Text>*/}
+        <View style={styles.toptextlayer}>
+          <Text style={styles.toptext}>요일선택</Text>
+        </View>
+        <View style={styles.buttonlayer}>
+          <WeekButton buttonColor={'#FFF'} title={'월'} titleColor={'#000'} />
+          <WeekButton buttonColor={'#FFF'} title={'화'} titleColor={'#000'} />
+          <WeekButton buttonColor={'#FFF'} title={'수'} titleColor={'#000'} />
+          <WeekButton buttonColor={'#FFF'} title={'목'} titleColor={'#000'} />
+          <WeekButton buttonColor={'#FFF'} title={'금'} titleColor={'#000'} />
+          <WeekButton buttonColor={'#FFF'} title={'토'} titleColor={'#000'} />
+          <WeekButton buttonColor={'#FFF'} title={'일'} titleColor={'#000'} />
+        </View>
       </View>
     );
   }
@@ -16,14 +26,24 @@ export default class WeekSelectGroup extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    flex: 1,
   },
   toptext: {
-    top: '-90%',
     color: '#8B8B8B',
+    top: '10%',
   },
   buttongroup: {
     fontSize: 17,
+  },
+  toptextlayer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonlayer: {
+    flex: 2,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexDirection: 'row',
   },
 });

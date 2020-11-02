@@ -9,7 +9,7 @@ function TrainScreen({navigation}) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.card}>
-        <View style={styles.selectDest}>
+        <View style={styles.sector1}>
           <DestinationButton
             buttonColor={'#FFF'}
             subtitle={'출발'}
@@ -24,13 +24,13 @@ function TrainScreen({navigation}) {
             titleColor={'#0012AF'}
           />
         </View>
-        <View style={styles.selectTime}>
+        <View style={styles.sector2}>
           <TimeSelectOption />
         </View>
-        <View style={styles.selectWeek}>
+        <View style={styles.sector3}>
           <WeekSelectGroup />
         </View>
-        <View style={styles.InquiryBtnSector}>
+        <View style={styles.sector4}>
           <InquiryButton
             buttonColor={'#2195FF'}
             title={'조회하기'}
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'center',
   },
-  selectDest: {
+  sector1: {
     backgroundColor: '#FFF',
     width: '100%',
     // height: '35%',
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
   },
-  selectTime: {
+  sector2: {
     backgroundColor: '#FFF',
     width: '100%',
     // height: '24%',
@@ -83,8 +83,7 @@ const styles = StyleSheet.create({
     borderColor: '#AAAAAA',
     borderTopWidth: 0.5,
   },
-  selectWeek: {
-    backgroundColor: '#FFF',
+  sector3: {
     width: '100%',
     // height: '24%',
     flex: 2,
@@ -93,7 +92,7 @@ const styles = StyleSheet.create({
     borderColor: '#AAAAAA',
     borderTopWidth: 0.5,
   },
-  InquiryBtnSector: {
+  sector4: {
     backgroundColor: '#FFFFFF',
     width: '100%',
     // height: '17%',
