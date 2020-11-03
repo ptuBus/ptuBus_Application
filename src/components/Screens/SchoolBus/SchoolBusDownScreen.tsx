@@ -5,17 +5,13 @@ import {
   SafeAreaView,
   StyleSheet,
   ScrollView,
-  Text,
   View,
-  TouchableOpacity,
-  Alert,
-  StatusBar,
 } from 'react-native';
+import SchoolBusListButton from '../../Buttons/SchoolBusListButton';
 
-function SchoolupBus() {
+function SchoolBusDownScreen() {
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
-
   useEffect(() => {
     fetch(
       'https://ptubus.com/server/schoolbus/?startStationID=1&endStationID=0&upDownTypeCode=D',
@@ -37,19 +33,11 @@ function SchoolupBus() {
             keyExtractor={({id}, index) => id}
             renderItem={({item}) => (
               <View style={styles.itemView}>
-                <TouchableOpacity
-                  onPress={() => {
-                    alert(item.startStationName);
-                  }}>
-                  <View style={styles.Info}>
-                    <Text style={styles.timeItem}>{item.schedule} </Text>
-                  </View>
-                  <View style={styles.Info}>
-                    <Text style={styles.stationNameItem}>
-                      {item.startStationName}{' '}
-                    </Text>
-                  </View>
-                </TouchableOpacity>
+                <SchoolBusListButton
+                  schedule={item.schedule}
+                  startStationName={item.startStationName}
+                  endStationName={item.endStationName}
+                />
               </View>
             )}
           />
@@ -69,23 +57,5 @@ const styles = StyleSheet.create({
     height: '17%',
     margin: 5,
   },
-  Info: {
-    flexDirection: 'column',
-    justifyContent: 'flex-start',
-    alignItems: 'stretch',
-  },
-  stationNameItem: {
-    fontSize: 10,
-    paddingLeft: 29,
-    paddingTop: 1,
-    paddingBottom: 10,
-    color: '#979797',
-  },
-  timeItem: {
-    fontSize: 19,
-    fontWeight: 'bold',
-    paddingLeft: 29,
-    paddingTop: 10,
-  },
 });
-export default SchoolupBus;
+export default SchoolBusDownScreen;

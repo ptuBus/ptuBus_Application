@@ -2,7 +2,7 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import HomeScreen from './HomeScreen';
 import TrainStackNavigation from '../../Navigations/TrainStackNavigation';
-import SchoolBusStackNavigation from '../../Navigations/SchoolBus/SchBTabNavigation';
+import SchoolBusStackNavigation from '../../Navigations/SchoolBus/SchoolBusTabNavigation';
 import ExpBStackNavigation from '../../Navigations/ExpBStackNavigation';
 import CityBStackNavigation from '../../Navigations/CityBStackNavigation';
 import SubwayStackNavigation from '../../Navigations/SubwayStackNavigation';

@@ -22,8 +22,8 @@ function SchoolBusTabNavigation() {
           backgroundColor: '#65B5FF',
         },
       }}>
-      <TopTab.Screen name="평택대학교방향" component={SchoolBusUpScreen} />
-      <TopTab.Screen name="평택역(롯데)방향" component={SchoolBusDownScreen} />
+      <TopTab.Screen name="평택대학교방향" component={SchoolBusDownScreen} />
+      <TopTab.Screen name="평택역(롯데)방향" component={SchoolBusUpScreen} />
     </TopTab.Navigator>
   );
 }
