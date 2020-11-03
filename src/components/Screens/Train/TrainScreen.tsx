@@ -2,20 +2,21 @@ import React from 'react';
 import {SafeAreaView, StyleSheet, View} from 'react-native';
 import InquiryButton from '../../Buttons/InquiryButton';
 import DestinationButton from '../../Buttons/DestinationButton';
+import ArrivalButton from "../../Buttons/ArrivalButton";
 import TimeSelectOption from '../../SelectOptions/TimeSelect/TimeSelectOption';
 import WeekSelectGroup from '../../SelectOptions/WeekSelect/WeekSelectGroup';
+
 
 function TrainScreen({navigation}) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.card}>
         <View style={styles.sector1}>
-          <DestinationButton
+          <ArrivalButton
             buttonColor={'#FFF'}
             subtitle={'출발'}
             title={'평택'}
             titleColor={'#000'}
-            onPress={() => null}
           />
           <DestinationButton
             buttonColor={'#FFF'}

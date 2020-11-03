@@ -1,5 +1,12 @@
 import React, {Component} from 'react';
-import {Button, View, StyleSheet, TouchableOpacity, Text} from 'react-native';
+import {
+  Button,
+  View,
+  StyleSheet,
+  TouchableOpacity,
+  Text,
+  TextInput,
+} from 'react-native';
 import Modal, {
   ModalTitle,
   ModalContent,
@@ -8,13 +15,14 @@ import Modal, {
   SlideAnimation,
   ScaleAnimation,
 } from 'react-native-modals';
+import TrainStationButtonGroup from "./TrainStationButtonGroup";
 
 export default class DestinationButton extends Component {
   static defaultProps = {
     buttonColor: '#FFF',
     title: 'untitled',
-    titleColor: '#0012AF',
     subtitle: 'untitled',
+    titleColor: '#0012AF',
     onPress: () => null,
   };
 
@@ -25,7 +33,6 @@ export default class DestinationButton extends Component {
   constructor(props) {
     super(props);
   }
-
   render() {
     return (
       <TouchableOpacity
@@ -51,7 +58,20 @@ export default class DestinationButton extends Component {
               flex: 1,
               backgroundColor: 'fff',
             }}>
-            <Text>Bottom Modal with Title</Text>
+            <View style={styles.TextInputLayer}>
+              <TextInput
+                style={styles.input}
+                placeholder="도착역 이름을 검색하세요."
+              />
+            </View>
+            <View style={styles.DataLayer}>
+              <View style={styles.DataButtonLayer}>
+                <TrainStationButtonGroup />
+              </View>
+              <View style={styles.DataSearchLayer}>
+                <Text>데이터 선택 레이어</Text>
+              </View>
+            </View>
           </ModalContent>
         </Modal.BottomModal>
       </TouchableOpacity>
@@ -76,36 +96,32 @@ const styles = StyleSheet.create({
     top: '-25%',
     color: '#8B8B8B',
   },
-  container: {
+  input: {
+    backgroundColor: '#E9E9E9',
+    height: '80%',
+    padding: '5%',
+    top: '-15%',
+    borderRadius: 10,
+    fontSize: 17,
+  },
+  TextInputLayer: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
-  },
-  dialogContentView: {
-    paddingLeft: 18,
-    paddingRight: 18,
-  },
-  navigationBar: {
-    borderBottomColor: '#b5b5b5',
     borderBottomWidth: 0.5,
-    backgroundColor: '#ffffff',
+    borderColor: '#AAA',
   },
-  navigationTitle: {
-    padding: 10,
+  DataLayer: {
+    flex: 5,
+    flexDirection: 'row',
   },
-  navigationButton: {
-    padding: 10,
+  DataButtonLayer: {
+    flex: 5,
   },
-  navigationLeftButton: {
-    paddingLeft: 20,
-    paddingRight: 40,
-  },
-  navigator: {
+  DataSearchLayer: {
+    borderColor: '#AAA',
+    borderLeftWidth: 0.5,
+    justifyContent: 'center',
+    alignItems: 'center',
     flex: 1,
-    // backgroundColor: '#000000',
-  },
-  customBackgroundModal: {
-    opacity: 0.5,
-    backgroundColor: '#000',
   },
 });
