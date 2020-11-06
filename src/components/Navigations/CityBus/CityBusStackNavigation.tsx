@@ -4,7 +4,7 @@ import CityBusScreen from "../../Screens/CityBus/CityBusScreen";
 
 const Stack = createStackNavigator();
 
-function CityBStackNavigation() {
+function CityBusStackNavigation() {
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -21,4 +21,4 @@ function CityBStackNavigation() {
   );
 }
 
-export default CityBStackNavigation;
+export default CityBusStackNavigation;

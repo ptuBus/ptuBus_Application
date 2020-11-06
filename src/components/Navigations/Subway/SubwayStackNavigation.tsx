@@ -1,6 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import SubwayScreen from '../Screens/SubwayScreen';
+import SubwayScreen from '../../Screens/Subway/SubwayScreen';
 
 const Stack = createStackNavigator();
 

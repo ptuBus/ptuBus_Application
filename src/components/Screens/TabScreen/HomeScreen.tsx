@@ -3,7 +3,7 @@ import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import CustomButtons from '../../Buttons/TransportationButton';
 import TransportationButton from '../../Buttons/TransportationButton';
 
-function HomeScreen({navigation}) {
+export default function HomeScreen({navigation}) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.Maintext}>
@@ -86,5 +86,3 @@ const styles = StyleSheet.create({
     backgroundColor: 'gray',
   },
 });
-
-export default HomeScreen;

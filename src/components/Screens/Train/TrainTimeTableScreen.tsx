@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 
-function TrainTimeTableScreen() {
+export default function TrainTimeTableScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.DestInfo}>
@@ -10,8 +10,6 @@ function TrainTimeTableScreen() {
     </SafeAreaView>
   );
 }
-
-export default TrainTimeTableScreen;
 
 const styles = StyleSheet.create({
   container: {

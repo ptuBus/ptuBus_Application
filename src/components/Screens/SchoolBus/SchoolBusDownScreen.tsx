@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import SchoolBusListButton from '../../Buttons/SchoolBusListButton';
 
-function SchoolBusDownScreen() {
+export default function SchoolBusDownScreen() {
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -58,4 +58,3 @@ const styles = StyleSheet.create({
     margin: 5,
   },
 });
-export default SchoolBusDownScreen;

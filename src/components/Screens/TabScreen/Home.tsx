@@ -1,15 +1,15 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import HomeScreen from './HomeScreen';
-import TrainStackNavigation from '../../Navigations/TrainStackNavigation';
+import TrainStackNavigation from '../../Navigations/Train/TrainStackNavigation';
 import SchoolBusStackNavigation from '../../Navigations/SchoolBus/SchoolBusTabNavigation';
-import ExpBStackNavigation from '../../Navigations/ExpBStackNavigation';
-import CityBStackNavigation from '../../Navigations/CityBStackNavigation';
-import SubwayStackNavigation from '../../Navigations/SubwayStackNavigation';
+import ExpBusStackNavigation from '../../Navigations/ExpBus/ExpBusStackNavigation';
+import CityBusStackNavigation from '../../Navigations/CityBus/CityBusStackNavigation';
+import SubwayStackNavigation from '../../Navigations/Subway/SubwayStackNavigation';
 
 const Stack = createStackNavigator();
 
-function Home() {
+export default function Home() {
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -29,7 +29,7 @@ function Home() {
       />
       <Stack.Screen
         name="고속/시외버스"
-        component={ExpBStackNavigation}
+        component={ExpBusStackNavigation}
         options={{
           headerStyle: {
             backgroundColor: '#F9F9F9',
@@ -39,7 +39,7 @@ function Home() {
       />
       <Stack.Screen
         name="시내버스"
-        component={CityBStackNavigation}
+        component={CityBusStackNavigation}
         options={{
           headerStyle: {
             backgroundColor: '#F9F9F9',
@@ -71,5 +71,3 @@ function Home() {
     </Stack.Navigator>
   );
 }
-
-export default Home;

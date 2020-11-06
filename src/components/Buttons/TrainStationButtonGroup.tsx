@@ -1,17 +1,18 @@
-import React, {useEffect, useState} from 'react';
+import React, {Component, useEffect, useState} from 'react';
 import {
   ActivityIndicator,
   FlatList,
   SafeAreaView,
   StyleSheet,
   ScrollView,
-  View,
+  View, Alert,
 } from 'react-native';
 import TrainStationButton from './TrainStationButton';
 
-function TrainStationButtonGroup() {
+export default function TrainStationButtonGroup() {
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
+
   useEffect(() => {
     fetch('https://ptubus.com/server/train/station/')
       .then((response) => response.json())
@@ -27,6 +28,7 @@ function TrainStationButtonGroup() {
           <ActivityIndicator />
         ) : (
           <FlatList
+            style={styles.buttonList}
             data={data}
             keyExtractor={({id}, index) => id}
             renderItem={({item}) => (
@@ -50,5 +52,7 @@ const styles = StyleSheet.create({
     height: '17%',
     margin: 5,
   },
+  buttonList: {
+    width: '25%',
+  },
 });
-export default TrainStationButtonGroup;

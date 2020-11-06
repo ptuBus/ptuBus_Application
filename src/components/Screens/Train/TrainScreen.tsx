@@ -1,13 +1,12 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, View} from 'react-native';
+import {Alert, SafeAreaView, StyleSheet, View} from 'react-native';
 import InquiryButton from '../../Buttons/InquiryButton';
 import DestinationButton from '../../Buttons/DestinationButton';
-import ArrivalButton from "../../Buttons/ArrivalButton";
+import ArrivalButton from '../../Buttons/ArrivalButton';
 import TimeSelectOption from '../../SelectOptions/TimeSelect/TimeSelectOption';
 import WeekSelectGroup from '../../SelectOptions/WeekSelect/WeekSelectGroup';
 
-
-function TrainScreen({navigation}) {
+export default function TrainScreen({navigation}) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.card}>
@@ -42,8 +41,6 @@ function TrainScreen({navigation}) {
     </SafeAreaView>
   );
 }
-
-export default TrainScreen;
 
 const styles = StyleSheet.create({
   container: {

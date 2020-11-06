@@ -5,6 +5,7 @@ export default class TransportationButton extends Component {
   static defaultProps = {
     buttonColor: '#FCFCFC',
     titleColor: '#000',
+    title: '',
     onPress: () => null,
   };
 

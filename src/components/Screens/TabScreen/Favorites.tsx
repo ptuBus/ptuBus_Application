@@ -2,7 +2,7 @@ import React from 'react';
 import 'react-native-gesture-handler';
 import {Text, SafeAreaView, StyleSheet} from 'react-native';
 
-function Favorites() {
+export default function Favorites() {
   return (
     <SafeAreaView style={style.container}>
       <Text style={style.hometext}>즐겨찾기</Text>
@@ -29,4 +29,3 @@ const style = StyleSheet.create({
     // letterSpacing: -0.24,
   },
 });
-export default Favorites;

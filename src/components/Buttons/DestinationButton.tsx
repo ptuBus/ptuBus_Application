@@ -15,7 +15,8 @@ import Modal, {
   SlideAnimation,
   ScaleAnimation,
 } from 'react-native-modals';
-import TrainStationButtonGroup from "./TrainStationButtonGroup";
+import TrainStationButtonGroup from './TrainStationButtonGroup';
+import DestinationSelectModal from "../SelectOptions/DestinationSelect/DestinationSelectModal";
 
 export default class DestinationButton extends Component {
   static defaultProps = {
@@ -26,12 +27,11 @@ export default class DestinationButton extends Component {
     onPress: () => null,
   };
 
-  state = {
-    bottomModalAndTitle: false,
-  };
-
   constructor(props) {
     super(props);
+    this.state = {
+      bottomModalAndTitle: false,
+    };
   }
   render() {
     return (

@@ -4,7 +4,7 @@ import ExpBusScreen from '../../Screens/ExpBus/ExpBusScreen';
 
 const Stack = createStackNavigator();
 
-function ExpBStackNavigation() {
+function ExpBusStackNavigation() {
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -21,4 +21,4 @@ function ExpBStackNavigation() {
   );
 }
 
-export default ExpBStackNavigation;
+export default ExpBusStackNavigation;

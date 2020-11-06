@@ -10,6 +10,8 @@ target 'ptubus' do
 
   pod 'react-native-date-picker', :path => '../node_modules/react-native-date-picker'
 
+  pod 'react-native-sqlite-storage', :path => '../node_modules/react-native-sqlite-storage'
+
   target 'ptubusTests' do
     inherit! :complete
     # Pods for testing
