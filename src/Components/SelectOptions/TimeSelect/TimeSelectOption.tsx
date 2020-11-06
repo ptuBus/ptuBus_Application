@@ -49,15 +49,19 @@ export default class TimeSelectOption extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.toptext}>출발시간</Text>
-                <TouchableOpacity
-                    onPress={() => {
-                        this.setState({
-                            bottomModalAndTitle: true,
-                        });
-                    }}>
-                    <Text style={styles.timeselect}>{this.state.date}</Text>
-                </TouchableOpacity>
+                <View style={styles.topTextLayer}>
+                    <Text style={styles.topText}>출발시간</Text>
+                </View>
+                <View style={styles.timeSelectLayer}>
+                    <TouchableOpacity
+                        onPress={() => {
+                            this.setState({
+                                bottomModalAndTitle: true,
+                            });
+                        }}>
+                        <Text style={styles.timeSelect}>{this.state.date}</Text>
+                    </TouchableOpacity>
+                </View>
 
                 <Modal.BottomModal
                     visible={this.state.bottomModalAndTitle}
@@ -86,11 +90,24 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-    toptext: {
+    topText: {
         top: '-90%',
+        justifyContent: 'center',
         color: '#8B8B8B',
     },
-    timeselect: {
+    timeSelect: {
         fontSize: 17,
+    },
+    topTextLayer: {
+        flex: 1,
+        width: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    timeSelectLayer: {
+        flex: 2,
+        width: '100%',
+        top: '12%',
+        alignItems: 'center',
     },
 });
