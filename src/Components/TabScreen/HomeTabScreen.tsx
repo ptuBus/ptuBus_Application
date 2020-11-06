@@ -19,7 +19,7 @@ export default function HomeTabScreen() {
                 options={{
                     headerStyle: {
                         backgroundColor: '#F9F9F9',
-                        height: 110,
+                        height:'100%',
                     },
                 }}
             />
@@ -29,7 +29,7 @@ export default function HomeTabScreen() {
                 options={{
                     headerStyle: {
                         backgroundColor: '#F9F9F9',
-                        height: 110,
+                        height:'100%',
                     },
                 }}
             />
@@ -39,7 +39,7 @@ export default function HomeTabScreen() {
                 options={{
                     headerStyle: {
                         backgroundColor: '#F9F9F9',
-                        height: 110,
+                        height:'100%',
                     },
                 }}
             />
@@ -49,7 +49,7 @@ export default function HomeTabScreen() {
                 options={{
                     headerStyle: {
                         backgroundColor: '#F9F9F9',
-                        height: 110,
+                        height:'100%',
                     },
                 }}
             />
@@ -59,7 +59,7 @@ export default function HomeTabScreen() {
                 options={{
                     headerStyle: {
                         backgroundColor: '#F9F9F9',
-                        height: 110,
+                        height:'100%',
                     },
                     headerBackTitleVisible: false,
                 }}
