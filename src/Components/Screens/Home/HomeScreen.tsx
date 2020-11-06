@@ -1,6 +1,6 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
-import {TransportationButton} from '../Buttons';
+import {TransportationButton} from '../../Buttons';
 
 export default function HomeScreen({navigation}) {
   return (
