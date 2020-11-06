@@ -1,6 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import ExpBusScreen from '../Screens/ExpBusScreen';
+import ExpBusScreen from '../../Screens/ExpBus/ExpBusScreen';
 
 const Stack = createStackNavigator();
 

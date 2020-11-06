@@ -1,15 +1,16 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import SchoolBusScreen from '../Screens/SchoolBusScreen';
+import SchoolBusTabNavigation from "./SchoolBus/SchoolBusTabNavigation";
 
 const Stack = createStackNavigator();
 
-function SchBStackNavigation() {
+function SchoolBusStackNavigation() {
   return (
     <Stack.Navigator>
       <Stack.Screen
         name="스쿨버스"
-        component={SchoolBusScreen}
+        component={SchoolBusTabNavigation}
         options={{
           headerStyle: {
             backgroundColor: '#F9F9F9',
@@ -21,4 +22,4 @@ function SchBStackNavigation() {
   );
 }
 
-export default SchBStackNavigation;
+export default SchoolBusStackNavigation;
