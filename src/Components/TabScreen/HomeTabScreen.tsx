@@ -15,7 +15,7 @@ export default function HomeTabScreen() {
             />
             <Stack.Screen
                 name="스쿨버스"
-                component={Navigations.SchoolBusStackNavigation}
+                component={Navigations.SchoolBusTopTabNavigation}
                 options={{
                     headerStyle: {
                         backgroundColor: '#F9F9F9',
