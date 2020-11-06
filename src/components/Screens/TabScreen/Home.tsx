@@ -25,6 +25,7 @@ export default function Home() {
             backgroundColor: '#F9F9F9',
             height: '100%',
           },
+          headerBackTitleVisible: false,
         }}
       />
       <Stack.Screen
@@ -35,6 +36,7 @@ export default function Home() {
             backgroundColor: '#F9F9F9',
             height: '100%',
           },
+          headerBackTitleVisible: false,
         }}
       />
       <Stack.Screen
@@ -45,6 +47,7 @@ export default function Home() {
             backgroundColor: '#F9F9F9',
             height: '100%',
           },
+          headerBackTitleVisible: false,
         }}
       />
       <Stack.Screen
@@ -55,6 +58,7 @@ export default function Home() {
             backgroundColor: '#F9F9F9',
             height: '100%',
           },
+          headerBackTitleVisible: false,
         }}
       />
       <Stack.Screen
