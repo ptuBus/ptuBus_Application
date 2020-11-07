@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
-import {Alert, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import {WeekButton} from '../../Buttons';
 
 export default class WeekSelectGroup extends Component {
     render() {
         return (
             <View style={styles.container}>
-                {/*<Text style={styles.toptext}>요일선택</Text>*/}
                 <View style={styles.topTextLayer}>
                     <Text style={styles.topText}>요일선택</Text>
                 </View>

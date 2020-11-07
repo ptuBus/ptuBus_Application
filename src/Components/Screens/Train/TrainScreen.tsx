@@ -1,6 +1,6 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, View} from 'react-native';
-import {DestinationButton, InquiryButton} from '../../Buttons';
+import * as Buttons from '../../Buttons';
 import {TimeSelectOption, WeekSelectGroup} from '../../SelectOptions';
 
 export default function TrainScreen({navigation}) {
@@ -8,14 +8,13 @@ export default function TrainScreen({navigation}) {
         <SafeAreaView style={styles.container}>
             <View style={styles.card}>
                 <View style={styles.selectDest}>
-                    <DestinationButton
+                    <Buttons.ArrivalButton
                         buttonColor={'#FFF'}
                         subtitle={'출발'}
                         title={'평택'}
                         titleColor={'#000'}
-                        onPress={() => null}
                     />
-                    <DestinationButton
+                    <Buttons.DestinationButton
                         buttonColor={'#FFF'}
                         subtitle={'도착'}
                         title={'서울'}
@@ -29,7 +28,7 @@ export default function TrainScreen({navigation}) {
                     <WeekSelectGroup />
                 </View>
                 <View style={styles.InquiryBtnSector}>
-                    <InquiryButton
+                    <Buttons.InquiryButton
                         buttonColor={'#2195FF'}
                         title={'조회하기'}
                         onPress={() => navigation.navigate('기차시간표')}

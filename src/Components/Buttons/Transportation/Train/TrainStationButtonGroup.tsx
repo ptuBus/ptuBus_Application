@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import {SchoolBusDestinationButton} from '../../Buttons';
 import {
     ActivityIndicator,
     FlatList,
@@ -8,15 +7,13 @@ import {
     ScrollView,
     View,
 } from 'react-native';
+import TrainStationButton from './TrainStationButton';
 
-export default function SchoolBusUpScreen() {
+function TrainStationButtonGroup() {
     const [isLoading, setLoading] = useState(true);
     const [data, setData] = useState([]);
-
     useEffect(() => {
-        fetch(
-            'https://ptubus.com/server/schoolbus/?startStationID=0&endStationID=1&upDownTypeCode=U',
-        )
+        fetch('https://ptubus.com/server/train/station/')
             .then((response) => response.json())
             .then((json) => setData(json))
             .catch((error) => console.error(error))
@@ -34,11 +31,7 @@ export default function SchoolBusUpScreen() {
                         keyExtractor={({id}, index) => id}
                         renderItem={({item}) => (
                             <View style={styles.itemView}>
-                                <SchoolBusDestinationButton
-                                    schedule={item.schedule}
-                                    startStationName={item.startStationName}
-                                    endStationName={item.endStationName}
-                                />
+                                <TrainStationButton endStationName={item.endStationName} />
                             </View>
                         )}
                     />
@@ -50,12 +43,12 @@ export default function SchoolBusUpScreen() {
 const styles = StyleSheet.create({
     itemView: {
         flex: 1,
-        flexDirection: 'column',
-        justifyContent: 'space-between',
+        borderColor: '#AAA',
+        borderWidth: 0.5,
         borderRadius: 15,
         backgroundColor: '#FFFFFF',
-        width: '100%',
         height: '17%',
         margin: 5,
     },
 });
+export default TrainStationButtonGroup;
