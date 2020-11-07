@@ -21,6 +21,7 @@ export default function HomeTabScreen() {
                         backgroundColor: '#F9F9F9',
                         height:'100%',
                     },
+                    headerBackTitleVisible: false,
                 }}
             />
             <Stack.Screen
@@ -31,6 +32,7 @@ export default function HomeTabScreen() {
                         backgroundColor: '#F9F9F9',
                         height:'100%',
                     },
+                    headerBackTitleVisible: false,
                 }}
             />
             <Stack.Screen
@@ -41,6 +43,7 @@ export default function HomeTabScreen() {
                         backgroundColor: '#F9F9F9',
                         height:'100%',
                     },
+                    headerBackTitleVisible: false,
                 }}
             />
             <Stack.Screen
@@ -51,6 +54,7 @@ export default function HomeTabScreen() {
                         backgroundColor: '#F9F9F9',
                         height:'100%',
                     },
+                    headerBackTitleVisible: false,
                 }}
             />
             <Stack.Screen
