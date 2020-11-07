@@ -25,7 +25,7 @@ export default function SchoolBusUpScreen() {
 
     return (
         <SafeAreaView style={{flex: 1}}>
-            <ScrollView style={{flex: 1}}>
+            <ScrollView style={{flex: 1, padding: 10}}>
                 {isLoading ? (
                     <ActivityIndicator />
                 ) : (
@@ -50,10 +50,11 @@ export default function SchoolBusUpScreen() {
 const styles = StyleSheet.create({
     itemView: {
         flex: 1,
+        flexDirection: 'column',
         justifyContent: 'center',
         borderRadius: 15,
         backgroundColor: '#FFFFFF',
-        width: '100%',
+        width: '99%',
         height: '17%',
         margin: 5,
     },

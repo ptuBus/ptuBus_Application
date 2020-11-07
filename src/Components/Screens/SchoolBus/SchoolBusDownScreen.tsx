@@ -51,10 +51,10 @@ const styles = StyleSheet.create({
     itemView: {
         flex: 1,
         flexDirection: 'column',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         borderRadius: 15,
         backgroundColor: '#FFFFFF',
-        width: '100%',
+        width: '99%',
         height: '17%',
         margin: 5,
     },
