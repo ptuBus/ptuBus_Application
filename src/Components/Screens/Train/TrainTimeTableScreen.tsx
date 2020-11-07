@@ -14,7 +14,7 @@ export default function TrainTimeTableScreen() {
             const week = new Array('일', '월', '화', '수', '목', '금', '토');
 
             const that = this;
-            const date = new Date().getDate(); //Current Date
+            const date = new Date().getDate();
             const month = new Date().getMonth() + 1;
             const year = new Date().getFullYear();
             const hours = new Date().getHours();

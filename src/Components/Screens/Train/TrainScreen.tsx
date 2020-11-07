@@ -52,7 +52,6 @@ const styles = StyleSheet.create({
     selectDest: {
         backgroundColor: '#FFF',
         width: '100%',
-        // height: '35%',
         flex: 3,
         borderTopLeftRadius: 10,
         borderTopRightRadius: 10,
@@ -63,7 +62,6 @@ const styles = StyleSheet.create({
     selectTime: {
         backgroundColor: '#FFF',
         width: '100%',
-        // height: '24%',
         flex: 2,
         justifyContent: 'center',
         alignItems: 'center',
@@ -73,7 +71,6 @@ const styles = StyleSheet.create({
     selectWeek: {
         backgroundColor: '#FFF',
         width: '100%',
-        // height: '24%',
         flex: 2,
         justifyContent: 'center',
         alignItems: 'center',
@@ -83,7 +80,6 @@ const styles = StyleSheet.create({
     InquiryBtnSector: {
         backgroundColor: '#FFFFFF',
         width: '100%',
-        // height: '17%',
         flex: 1.3,
         justifyContent: 'center',
         alignItems: 'center',

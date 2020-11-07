@@ -26,6 +26,5 @@ const style = StyleSheet.create({
         fontStyle: 'normal',
         fontWeight: '600',
         fontSize: 28,
-        // letterSpacing: -0.24,
     },
 });

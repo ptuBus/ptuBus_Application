@@ -1,28 +1,17 @@
 import React, {Component} from 'react';
 import {TouchableOpacity, Text, StyleSheet} from 'react-native';
 
-export default class WeekButton extends Component {
-    static defaultProps = {
-        buttonColor: '#2195FF',
-        titleColor: '#FFF',
-        onPress: () => null,
-    };
+export default function WeekButton(props){
+    return (
+        <TouchableOpacity
+            style={[styles.button, {backgroundColor: props.buttonColor}]}
+            onPress={props.onPress}>
+            <Text style={[styles.title, {color: props.titleColor}]}>
+                {props.title}
+            </Text>
+        </TouchableOpacity>
+    );
 
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <TouchableOpacity
-                style={[styles.button, {backgroundColor: this.props.buttonColor}]}
-                onPress={this.props.onPress}>
-                <Text style={[styles.title, {color: this.props.titleColor}]}>
-                    {this.props.title}
-                </Text>
-            </TouchableOpacity>
-        );
-    }
 }
 
 const styles = StyleSheet.create({
@@ -34,6 +23,8 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         borderColor: '#AAA',
         borderWidth: 0.5,
+        backgroundColor: '#2195FF',
+        color: '#FFF',
     },
     title: {
         fontSize: 15,
