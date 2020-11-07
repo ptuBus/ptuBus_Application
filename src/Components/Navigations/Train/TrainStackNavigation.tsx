@@ -1,7 +1,6 @@
 import React from 'react'
 import {createStackNavigator} from '@react-navigation/stack'
-import {TrainScreen} from '../../Screens'
-import {DestinationSelectModal} from '../../SelectOptions';
+import * as Train from '../../Screens'
 
 const Stack = createStackNavigator();
 
@@ -10,7 +9,17 @@ export default function TrainStackNavigation() {
         <Stack.Navigator>
             <Stack.Screen
                 name="지하철"
-                component={TrainScreen}
+                component={Train.TrainScreen}
+                options={{
+                    headerStyle: {
+                        backgroundColor: '#F9F9F9',
+                        height: 110,
+                    },
+                }}
+            />
+            <Stack.Screen
+                name="기차시간표"
+                component={Train.TrainTimeTableScreen}
                 options={{
                     headerStyle: {
                         backgroundColor: '#F9F9F9',
