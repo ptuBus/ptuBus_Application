@@ -8,12 +8,14 @@ export default function SchoolBusTopTabNavigation() {
     return (
         <TopTabNavigator.Navigator
             tabBarOptions={{
-                activeTintColor: '#000',
+                activeTintColor: '#FFFFFF',
                 inactiveTintColor: '#FFFFFF',
                 labelStyle: {fontSize: 13},
                 indicatorStyle: {
                     borderWidth: 0.1,
                     borderColor: 'black',
+                    height: '100%',
+                    backgroundColor: '#2195FF',
                 },
                 style: {
                     backgroundColor: '#65B5FF',
