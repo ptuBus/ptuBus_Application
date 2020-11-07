@@ -8,7 +8,7 @@ export default function TrainStackNavigation() {
     return (
         <Stack.Navigator>
             <Stack.Screen
-                name="지하철"
+                name="기차"
                 component={Train.TrainScreen}
                 options={{
                     headerStyle: {
