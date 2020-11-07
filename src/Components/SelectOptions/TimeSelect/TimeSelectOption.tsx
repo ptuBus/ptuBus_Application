@@ -94,7 +94,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     topText: {
-        top: '-90%',
         justifyContent: 'center',
         color: '#8B8B8B',
     },
