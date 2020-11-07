@@ -38,18 +38,16 @@ export default function SchoolBusDestinationButton(props) {
                 <ModalContent
                     style={{
                         flex: 1,
-                        backgroundColor: 'white',
+                        backgroundColor: 'yellow',
                     }}>
-                    <View style={styles.content}>
-                        <View>
-                            <Text style={styles.alarm}>알람주기</Text>
-                        </View>
-                        <View>
-                            <Text style={styles.alarm}>다시알람</Text>
-                        </View>
-                        <View>
-                            <Text style={styles.alarm}>푸시알람</Text>
-                        </View>
+                    <View style={styles.settingAlarmLayout}>
+                        <Text style={styles.alarm}>알람주기</Text>
+                    </View>
+                    <View style={styles.settingAlarmLayout}>
+                        <Text style={styles.alarm}>다시알람</Text>
+                    </View>
+                    <View style={styles.settingAlarmLayout}>
+                        <Text style={styles.alarm}>푸시알람</Text>
                     </View>
                 </ModalContent>
             </Modal.BottomModal>
@@ -61,20 +59,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    itemView: {
-        flex: 1,
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        borderRadius: 15,
-        backgroundColor: '#FFFFFF',
-        width: '100%',
-        height: '17%',
-        margin: 5,
-    },
     Info: {
-        flexDirection: 'column',
-        justifyContent: 'flex-start',
-        alignItems: 'stretch',
+        justifyContent: 'center',
     },
     stationNameItem: {
         fontSize: 12,
@@ -89,17 +75,14 @@ const styles = StyleSheet.create({
         paddingLeft: 29,
         paddingTop: 10,
     },
-    content: {
-        width: '100%',
-        height: '24%',
+    settingAlarmLayout: {
+        borderWidth: 0.5,
+        borderColor: '#AAA',
+        height: '10%',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#d6ca1a',
     },
     alarm: {
-        width: '100%',
-        height: '33%',
-        justifyContent: 'flex-start',
-        alignItems: 'center',
+        justifyContent: 'center',
     },
 });
