@@ -39,8 +39,6 @@ export default function TrainScreen({navigation}) {
     );
 }
 
-export default TrainScreen;
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
