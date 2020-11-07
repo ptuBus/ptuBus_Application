@@ -8,17 +8,11 @@ export default function TrainScreen({navigation}) {
         <SafeAreaView style={styles.container}>
             <View style={styles.card}>
                 <View style={styles.selectDest}>
-                    <Buttons.ArrivalButton
-                        buttonColor={'#FFF'}
-                        subtitle={'출발'}
+                    <Buttons.DepartureButton
                         title={'평택'}
-                        titleColor={'#000'}
                     />
-                    <Buttons.DestinationButton
-                        buttonColor={'#FFF'}
-                        subtitle={'도착'}
+                    <Buttons.ArrivalButton
                         title={'서울'}
-                        titleColor={'#0012AF'}
                     />
                 </View>
                 <View style={styles.selectTime}>
@@ -29,8 +23,6 @@ export default function TrainScreen({navigation}) {
                 </View>
                 <View style={styles.InquiryBtnSector}>
                     <Buttons.InquiryButton
-                        buttonColor={'#2195FF'}
-                        title={'조회하기'}
                         onPress={() => navigation.navigate('기차시간표')}
                     />
                 </View>
