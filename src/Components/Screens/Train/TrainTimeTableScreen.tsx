@@ -21,20 +21,23 @@ export default function TrainTimeTableScreen() {
             const min = new Date().getMinutes();
             const daynumber = new Date().getDay();
             const daylabel = week[daynumber];
+            const zerofill_date = date < 10 ? '0' + date : date;
+            const zerofill_hours = hours < 10 ? '0' + hours : hours;
+            const zerofill_min = min < 10 ? '0' + min : min;
             that.setState({
                 date:
                     year +
                     '년 ' +
                     month +
                     '월 ' +
-                    date +
+                    zerofill_date +
                     '일 ' +
                     '(' +
                     daylabel +
                     ') ' +
-                    hours +
+                    zerofill_hours +
                     ':' +
-                    min,
+                    zerofill_min,
             });
         }
         render() {
@@ -45,7 +48,8 @@ export default function TrainTimeTableScreen() {
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.DestInfoLayout}>
-                <Text style={styles.DestInfo}>평택 - 서울</Text>{/* 도착역 Props로 전달*/}
+                <Text style={styles.DestInfo}>평택 - 서울</Text>
+                {/* 도착역 Props로 전달*/}
             </View>
             <View style={styles.ListLayout}>
                 <View style={styles.card}>
@@ -59,7 +63,8 @@ export default function TrainTimeTableScreen() {
                         <Text style={{fontSize: 15, fontWeight: '500'}}>노선명</Text>
                     </View>
                     <View style={styles.TimeTableLayout}>
-                        <Text>기차 시간표 레이아웃</Text>{/* 기차 시간표 띄워주기*/}
+                        <Text>기차 시간표 레이아웃</Text>
+                        {/* 기차 시간표 띄워주기*/}
                     </View>
                 </View>
             </View>

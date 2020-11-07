@@ -29,20 +29,23 @@ export default class TimeSelectOption extends Component {
         const min = new Date().getMinutes();
         const daynumber = new Date().getDay();
         const daylabel = week[daynumber];
+        const zerofill_date = date < 10 ? '0' + date : date;
+        const zerofill_hours = hours < 10 ? '0' + hours : hours;
+        const zerofill_min = min < 10 ? '0' + min : min;
         that.setState({
             date:
                 year +
                 '년 ' +
                 month +
                 '월 ' +
-                date +
+                zerofill_date +
                 '일 ' +
                 '(' +
                 daylabel +
                 ') ' +
-                hours +
+                zerofill_hours +
                 ':' +
-                min,
+                zerofill_min,
         });
     }
 
