@@ -1,29 +1,16 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {TouchableOpacity, Text, StyleSheet} from 'react-native';
 
-export default class TransportationButton extends Component {
-  static defaultProps = {
-    buttonColor: '#FCFCFC',
-    titleColor: '#000',
-    title: '',
-    onPress: () => null,
-  };
-
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
+export default function TransportationButton(props){
     return (
       <TouchableOpacity
-        style={[styles.button, {backgroundColor: this.props.buttonColor}]}
-        onPress={this.props.onPress}>
-        <Text style={[styles.title, {color: this.props.titleColor}]}>
-          {this.props.title}
+        style={[styles.button, {backgroundColor: props.buttonColor}]}
+        onPress={props.onPress}>
+        <Text style={[styles.title, {color: props.titleColor}]}>
+          {props.title}
         </Text>
       </TouchableOpacity>
     );
-  }
 }
 
 const styles = StyleSheet.create({

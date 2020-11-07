@@ -1,4 +1,4 @@
-import React, {Component, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
     ActivityIndicator,
     FlatList,
@@ -6,11 +6,10 @@ import {
     StyleSheet,
     ScrollView,
     View,
-    Alert,
 } from 'react-native';
 import TrainStationButton from './TrainStationButton';
 
-function TrainStationButtonGroup() {
+export default function TrainStationButtonGroup() {
     const [isLoading, setLoading] = useState(true);
     const [data, setData] = useState([]);
     useEffect(() => {
@@ -56,4 +55,3 @@ const styles = StyleSheet.create({
         width: '25%',
     },
 });
-export default TrainStationButtonGroup;

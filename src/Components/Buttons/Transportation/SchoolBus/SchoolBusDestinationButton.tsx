@@ -1,82 +1,60 @@
-import React, {Component} from 'react';
-import {Button, View, StyleSheet, TouchableOpacity, Text} from 'react-native';
+import React, {useState} from 'react';
+import {View, StyleSheet, TouchableOpacity, Text} from 'react-native';
 import Modal, {
     ModalTitle,
     ModalContent,
-    ModalFooter,
-    ModalButton,
-    SlideAnimation,
-    ScaleAnimation,
 } from 'react-native-modals';
 
-export default class SchoolBusDestinationButton extends Component {
-    static defaultProps = {
-        schedule: '00:00',
-        startStationName: '',
-        endStationName: '',
-        onPress: () => null,
-    };
-
-    state = {
-        bottomModalAndTitle: false,
-    };
-
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <TouchableOpacity
-                onPress={() => {
-                    this.setState({
-                        bottomModalAndTitle: true,
-                    });
-                }}>
-                <View style={styles.container}>
-                    <View style={styles.Info}>
-                        <Text style={styles.timeItem}>{this.props.schedule} </Text>
-                    </View>
-                    <View style={styles.Info}>
-                        <Text style={styles.stationNameItem}>
-                            {this.props.startStationName}{' '}
-                        </Text>
-                    </View>
-                    <View />
+export default function SchoolBusDestinationButton(props) {
+    const [bottomModalAndTitle, setBottomModalAndTitle] = useState(false);
+    return (
+        <TouchableOpacity
+            onPress={() => {
+                setBottomModalAndTitle(true);
+            }}>
+            <View style={styles.container}>
+                <View style={styles.Info}>
+                    <Text style={styles.timeItem}>{props.schedule} </Text>
                 </View>
+                <View style={styles.Info}>
+                    <Text style={styles.stationNameItem}>
+                        {props.startStationName}{' '}
+                    </Text>
+                </View>
+                <View />
+            </View>
 
-                <Modal.BottomModal
-                    visible={this.state.bottomModalAndTitle}
-                    onTouchOutside={() => this.setState({bottomModalAndTitle: false})}
-                    height={0.95}
-                    width={1}
-                    onSwipeOut={() => this.setState({bottomModalAndTitle: false})}>
-                    <ModalTitle
-                        title="대중교통 알림설정"
-                        align="center"
-                        backgroundcolor="#F3F3F3"
-                    />
-                    <ModalContent
-                        style={{
-                            flex: 1,
-                            backgroundColor: 'white',
-                        }}>
-                        <View style={styles.content}>
-                            <View>
-                                <Text style={styles.alarm}>알람주기</Text>
-                            </View>
-                            <View>
-                                <Text style={styles.alarm}>다시알람</Text>
-                            </View>
-                            <View>
-                                <Text style={styles.alarm}>푸시알람</Text>
-                            </View>
+            <Modal.BottomModal
+                visible={bottomModalAndTitle}
+                onTouchOutside={() => setBottomModalAndTitle(false)}
+                height={0.95}
+                width={1}
+                onSwipeOut={() => setBottomModalAndTitle(false)}>
+                <ModalTitle
+                    title="대중교통 알림설정"
+                    align="center"
+                    backgroundcolor="#F3F3F3"
+                />
+                <ModalContent
+                    style={{
+                        flex: 1,
+                        backgroundColor: 'white',
+                    }}>
+                    <View style={styles.content}>
+                        <View>
+                            <Text style={styles.alarm}>알람주기</Text>
                         </View>
-                    </ModalContent>
-                </Modal.BottomModal>
-            </TouchableOpacity>
-        );
-    }
+                        <View>
+                            <Text style={styles.alarm}>다시알람</Text>
+                        </View>
+                        <View>
+                            <Text style={styles.alarm}>푸시알람</Text>
+                        </View>
+                    </View>
+                </ModalContent>
+            </Modal.BottomModal>
+        </TouchableOpacity>
+    );
 }
 
 const styles = StyleSheet.create({
