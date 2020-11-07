@@ -99,15 +99,15 @@ const styles = StyleSheet.create({
         alignItems: 'stretch',
     },
     stationNameItem: {
-        fontSize: 10,
+        fontSize: 12,
         paddingLeft: 29,
         paddingTop: 1,
         paddingBottom: 10,
         color: '#979797',
     },
     timeItem: {
-        fontSize: 19,
-        fontWeight: 'bold',
+        fontSize: 17,
+        fontWeight: '600',
         paddingLeft: 29,
         paddingTop: 10,
     },

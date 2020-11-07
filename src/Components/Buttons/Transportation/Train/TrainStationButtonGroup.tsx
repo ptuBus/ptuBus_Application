@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {Component, useEffect, useState} from 'react';
 import {
     ActivityIndicator,
     FlatList,
@@ -6,6 +6,7 @@ import {
     StyleSheet,
     ScrollView,
     View,
+    Alert,
 } from 'react-native';
 import TrainStationButton from './TrainStationButton';
 
@@ -27,6 +28,7 @@ function TrainStationButtonGroup() {
                     <ActivityIndicator />
                 ) : (
                     <FlatList
+                        style={styles.buttonList}
                         data={data}
                         keyExtractor={({id}, index) => id}
                         renderItem={({item}) => (
@@ -49,6 +51,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFFFFF',
         height: '17%',
         margin: 5,
+    },
+    buttonList: {
+        width: '25%',
     },
 });
 export default TrainStationButtonGroup;
