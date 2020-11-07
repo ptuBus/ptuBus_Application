@@ -7,7 +7,7 @@ const Stack = createStackNavigator();
 
 export default function HomeTabScreen() {
     return (
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{headerBackTitleVisible: false}}>
             <Stack.Screen
                 name="홈"
                 component={HomeScreen}
@@ -21,7 +21,6 @@ export default function HomeTabScreen() {
                         backgroundColor: '#F9F9F9',
                         height:'100%',
                     },
-                    headerBackTitleVisible: false,
                 }}
             />
             <Stack.Screen
@@ -32,7 +31,6 @@ export default function HomeTabScreen() {
                         backgroundColor: '#F9F9F9',
                         height:'100%',
                     },
-                    headerBackTitleVisible: false,
                 }}
             />
             <Stack.Screen
@@ -43,7 +41,6 @@ export default function HomeTabScreen() {
                         backgroundColor: '#F9F9F9',
                         height:'100%',
                     },
-                    headerBackTitleVisible: false,
                 }}
             />
             <Stack.Screen
@@ -54,7 +51,6 @@ export default function HomeTabScreen() {
                         backgroundColor: '#F9F9F9',
                         height:'100%',
                     },
-                    headerBackTitleVisible: false,
                 }}
             />
             <Stack.Screen
@@ -65,7 +61,6 @@ export default function HomeTabScreen() {
                         backgroundColor: '#F9F9F9',
                         height:'100%',
                     },
-                    headerBackTitleVisible: false,
                 }}
             />
         </Stack.Navigator>

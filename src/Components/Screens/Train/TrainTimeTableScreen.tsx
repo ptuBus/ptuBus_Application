@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 
-export default function TrainTimeTableScreen() {
+export default function TrainTimeTableScreen({}) {
     class Time extends Component {
         constructor(props) {
             super(props);
