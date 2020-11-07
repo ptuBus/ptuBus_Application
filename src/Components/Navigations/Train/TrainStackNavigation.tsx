@@ -1,7 +1,7 @@
 import React from 'react'
 import {createStackNavigator} from '@react-navigation/stack'
 import {TrainScreen} from '../../Screens'
-import DestinationSelectModal from '../SelectOptions/DestinationSelect/DestinationSelectModal';
+import {DestinationSelectModal} from '../../SelectOptions';
 
 const Stack = createStackNavigator();
 

@@ -1,14 +1,12 @@
 import React, {useEffect, useState} from 'react';
+import {SchoolBusDestinationButton} from '../../Buttons';
 import {
     ActivityIndicator,
     FlatList,
     SafeAreaView,
     StyleSheet,
     ScrollView,
-    Text,
-    View,
-    TouchableOpacity,
-    Alert,
+    View
 } from 'react-native';
 
 export default function SchoolBusDownScreen() {
@@ -36,19 +34,11 @@ export default function SchoolBusDownScreen() {
                         keyExtractor={({id}, index) => id}
                         renderItem={({item}) => (
                             <View style={styles.itemView}>
-                                <TouchableOpacity
-                                    onPress={() => {
-                                        alert(item.startStationName);
-                                    }}>
-                                    <View style={styles.Info}>
-                                        <Text style={styles.timeItem}>{item.schedule} </Text>
-                                    </View>
-                                    <View style={styles.Info}>
-                                        <Text style={styles.stationNameItem}>
-                                            {item.startStationName}{' '}
-                                        </Text>
-                                    </View>
-                                </TouchableOpacity>
+                                <SchoolBusDestinationButton
+                                    schedule={item.schedule}
+                                    startStationName={item.startStationName}
+                                    endStationName={item.endStationName}
+                                />
                             </View>
                         )}
                     />
@@ -67,23 +57,5 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '17%',
         margin: 5,
-    },
-    Info: {
-        flexDirection: 'column',
-        justifyContent: 'flex-start',
-        alignItems: 'stretch',
-    },
-    stationNameItem: {
-        fontSize: 10,
-        paddingLeft: 29,
-        paddingTop: 1,
-        paddingBottom: 10,
-        color: '#979797',
-    },
-    timeItem: {
-        fontSize: 19,
-        fontWeight: 'bold',
-        paddingLeft: 29,
-        paddingTop: 10,
     },
 });
