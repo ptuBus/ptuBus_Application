@@ -4,7 +4,7 @@ import * as Screens from "../../Screens";
 
 const TopTabNavigator = createMaterialTopTabNavigator();
 
-export default function SchoolBusTopTabNavigation() {
+export default function SubwayTopTabNavigation() {
     return (
         <TopTabNavigator.Navigator
             tabBarOptions={{
@@ -21,8 +21,9 @@ export default function SchoolBusTopTabNavigation() {
                     backgroundColor: '#65B5FF',
                 },
             }}>
-            <TopTabNavigator.Screen name="평택대학교방향" component={Screens.SchoolBusDownScreen} />
-            <TopTabNavigator.Screen name="평택역(롯데)방향" component={Screens.SchoolBusUpScreen} />
+            <TopTabNavigator.Screen name="최소시간" component={Screens.SubwayLeastTimeScreen} />
+            <TopTabNavigator.Screen name="최단거리" component={Screens.SubwayLeastDistanceScreen} />
+            <TopTabNavigator.Screen name="최소환승" component={Screens.SubwayLeastTransferScreen} />
         </TopTabNavigator.Navigator>
     );
 }

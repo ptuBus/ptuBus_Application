@@ -45,7 +45,7 @@ export default function HomeTabScreen() {
             />
             <Stack.Screen
                 name="지하철"
-                component={Navigations.SubwayStackNavigation}
+                component={Navigations.SubwayTopTabNavigation}
                 options={{
                     headerStyle: {
                         backgroundColor: '#F9F9F9',
