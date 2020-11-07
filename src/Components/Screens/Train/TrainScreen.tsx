@@ -24,6 +24,8 @@ export default function TrainScreen({navigation}) {
                 <View style={styles.InquiryBtnSector}>
                     <Buttons.InquiryButton
                         onPress={() => navigation.navigate('기차시간표')}
+                        width={'95%'}
+                        height={'55%'}
                     />
                 </View>
             </View>
