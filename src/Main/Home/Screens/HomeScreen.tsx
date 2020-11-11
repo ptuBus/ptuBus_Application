@@ -29,7 +29,7 @@ export default function HomeScreen({navigation: {navigate}}) {
         <MenuButton
             buttonColor={'#FCFCFC'}
             title={'지하철'}
-            onPress={() => null}
+            onPress={() => navigate('지하철')}
         />
       </View>
       <View style={styles.ButtonLayer}>
