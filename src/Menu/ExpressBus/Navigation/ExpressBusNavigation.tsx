@@ -4,7 +4,7 @@ import ExpressBusScreen from "../Screens/ExpressBusScreen";
 
 const Stack = createStackNavigator();
 
-export default function ExpressBusStackNavigation() {
+export default function ExpressBusNavigation() {
     return (
         <Stack.Navigator>
             <Stack.Screen

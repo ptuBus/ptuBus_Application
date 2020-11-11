@@ -2,7 +2,7 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import HomeScreen from "../Screens/HomeScreen";
 import SchoolBusNavigation from "../../../Menu/SchoolBus/Navigation/SchoolBusNavigation";
-import ExpressBusStackNavigation from "../../../Menu/ExpressBus/Navigation/ExpressBusStackNavigation";
+import ExpressBusNavigation from "../../../Menu/ExpressBus/Navigation/ExpressBusNavigation";
 import CityBusNavigation from "../../../Menu/CityBus/Navigation/CityBusNavigation";
 import SubwayNavigation from "../../../Menu/Subway/Navigation/SubwayNavigation";
 
@@ -27,7 +27,7 @@ export default function HomeTabScreen() {
             />
             <Stack.Screen
                 name="고속/시외버스"
-                component={ExpressBusStackNavigation}
+                component={ExpressBusNavigation}
                 options={{
                     headerStyle: {
                         backgroundColor: '#F9F9F9',
