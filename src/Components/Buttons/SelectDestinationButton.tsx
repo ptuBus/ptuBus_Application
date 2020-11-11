@@ -1,19 +1,18 @@
 import React, {useState} from 'react';
 import {View, StyleSheet, TouchableOpacity, Text, Image} from 'react-native';
-import Modal, {
-    ModalTitle,
-    ModalContent,
-} from 'react-native-modals';
+import ButtonModal from "./ButtonModal";
 
 export default function SelectDestinationButton(props) {
-    const [bottomModalAndTitle, setBottomModalAndTitle] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+    const onClose = () => setShowModal(false);
+
     return (
         <View style={{flex:1, flexDirection: 'row'}}>
             <TouchableOpacity
                 style={styles.container}
-                onPress={() => {
-                    setBottomModalAndTitle(true);
-                }}>
+                onPress={() => (
+                    setShowModal(true)
+                )}>
                 <View style={styles.Info}>
                     <Text style={styles.timeItem}>{props.schedule} </Text>
                 </View>
@@ -22,43 +21,15 @@ export default function SelectDestinationButton(props) {
                         {props.startStationName}{' '}
                     </Text>
                 </View>
-                <View />
-
-                <Modal.BottomModal
-                    visible={bottomModalAndTitle}
-                    onTouchOutside={() => setBottomModalAndTitle(false)}
-                    height={0.95}
-                    width={1}
-                    onSwipeOut={() => setBottomModalAndTitle(false)}>
-                    <ModalTitle
-                        title="대중교통 알림설정"
-                        align="center"
-                        backgroundcolor="#F3F3F3"
-                    />
-                    <ModalContent
-                        style={{
-                            flex: 1,
-                            backgroundColor: 'yellow',
-                        }}>
-                        <View style={styles.settingAlarmLayout}>
-                            <Text style={styles.alarm}>알람주기</Text>
-                        </View>
-                        <View style={styles.settingAlarmLayout}>
-                            <Text style={styles.alarm}>다시알람</Text>
-                        </View>
-                        <View style={styles.settingAlarmLayout}>
-                            <Text style={styles.alarm}>푸시알람</Text>
-                        </View>
-                    </ModalContent>
-                </Modal.BottomModal>
+                <ButtonModal show={showModal} onClose={onClose}/>
             </TouchableOpacity>
 
             <TouchableOpacity
                 style={styles.scontainer}
                 activeOpacity={0.5}
-                onPress={() => {
-                    setBottomModalAndTitle(true);
-                }}>
+                onPress={() =>
+                    null
+                }>
                 <View style={styles.iconBox} >
                     <Image
                         style={styles.ImageIconStyle}
