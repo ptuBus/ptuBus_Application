@@ -2,7 +2,7 @@ import React from 'react';
 import 'react-native-gesture-handler';
 import {Text, SafeAreaView, StyleSheet} from 'react-native';
 
-function Favorites() {
+export default function FavoriteScreen() {
   return (
     <SafeAreaView style={style.container}>
       <Text style={style.hometext}>즐겨찾기</Text>
@@ -28,4 +28,3 @@ const style = StyleSheet.create({
     fontSize: 28,
   },
 });
-export default Favorites;

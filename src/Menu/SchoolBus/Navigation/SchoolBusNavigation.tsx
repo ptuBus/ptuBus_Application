@@ -1,6 +1,7 @@
 import React from 'react';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-import * as Screens from '../../SchoolBus';
+import SchoolBusDownScreen from "../Screens/SchoolBusDownScreen";
+import SchoolBusUpScreen from "../Screens/SchoolBusUpScreen";
 const TopTabNavigator = createMaterialTopTabNavigator();
 
 export default function SchoolBusNavigation() {
@@ -20,8 +21,8 @@ export default function SchoolBusNavigation() {
                     backgroundColor: '#65B5FF',
                 },
             }}>
-            <TopTabNavigator.Screen name="평택대학교방향" component={Screens.SchoolBusUpScreen} />
-            <TopTabNavigator.Screen name="평택역(롯데)방향" component={Screens.SchoolBusDownScreen} />
+            <TopTabNavigator.Screen name="평택대학교방향" component={SchoolBusUpScreen} />
+            <TopTabNavigator.Screen name="평택역(롯데)방향" component={SchoolBusDownScreen} />
         </TopTabNavigator.Navigator>
     );
 }
