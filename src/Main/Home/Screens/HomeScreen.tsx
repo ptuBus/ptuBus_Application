@@ -19,7 +19,7 @@ export default function HomeScreen({navigation: {navigate}}) {
         <MenuButton
             buttonColor={'#FCFCFC'}
             title={'고속/시외버스'}
-            onPress={() => null}
+            onPress={() => navigate('고속/시외버스')}
         />
         <MenuButton
             buttonColor={'#FCFCFC'}

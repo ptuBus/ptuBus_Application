@@ -14,6 +14,7 @@ export default function ExpressBusStackNavigation() {
                     headerStyle: {
                         backgroundColor: '#F9F9F9',
                     },
+                    headerShown: false,
                 }}
             />
         </Stack.Navigator>
