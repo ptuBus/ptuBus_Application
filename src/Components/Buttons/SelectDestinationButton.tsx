@@ -62,7 +62,7 @@ export default function SelectDestinationButton(props) {
                 <View style={styles.iconBox} >
                     <Image
                         style={styles.ImageIconStyle}
-                        source={require('../../../Images/star.png')}
+                        source={require('../Images/unselectstar.png')}
                     />
                 </View>
             </TouchableOpacity>
