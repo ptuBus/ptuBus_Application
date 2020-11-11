@@ -1,8 +1,8 @@
 import React from 'react';
-import {Button, SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import MenuButton from "../../../Components/Buttons/MenuButton";
 
-export default function HomeScreen({navigation}) {
+export default function HomeScreen({navigation: {navigate}}) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.mainText}>
@@ -14,7 +14,7 @@ export default function HomeScreen({navigation}) {
         <MenuButton
           buttonColor={'#FCFCFC'}
           title={'스쿨버스'}
-          onPress={() => null}
+          onPress={() => navigate('스쿨버스')}
         />
         <MenuButton
             buttonColor={'#FCFCFC'}
