@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button, SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import MenuButton from "../../../Components/Buttons/MenuButton";
 
 export default function HomeScreen({navigation}) {
   return (
@@ -10,19 +11,36 @@ export default function HomeScreen({navigation}) {
         </Text>
       </View>
       <View style={styles.ButtonLayer}>
-        <Button title={'스쿨버스'} onPress={() => navigation.navigate('')} />
-        <Button
-          title={'고속/시외버스'}
-          onPress={() => navigation.navigate('')}
+        <MenuButton
+          buttonColor={'#FCFCFC'}
+          title={'스쿨버스'}
+          onPress={() => null}
         />
-        <Button title={'시내버스'} onPress={() => navigation.navigate('')} />
-        <Button title={'지하철'} onPress={() => navigation.navigate('')} />
+        <MenuButton
+            buttonColor={'#FCFCFC'}
+            title={'고속/시외버스'}
+            onPress={() => null}
+        />
+        <MenuButton
+            buttonColor={'#FCFCFC'}
+            title={'시내버스'}
+            onPress={() => null}
+        />
+        <MenuButton
+            buttonColor={'#FCFCFC'}
+            title={'지하철'}
+            onPress={() => null}
+        />
       </View>
       <View style={styles.ButtonLayer}>
-        <Button title={'기차'} onPress={() => navigation.navigate('')} />
-        <Button onPress={() => navigation.navigate('')} title={''} />
-        <Button onPress={() => navigation.navigate('')} title={''} />
-        <Button onPress={() => navigation.navigate('')} title={''} />
+        <MenuButton
+            buttonColor={'#FCFCFC'}
+            title={'기차'}
+            onPress={() => null}
+        />
+        <MenuButton />
+        <MenuButton />
+        <MenuButton />
       </View>
       <View style={styles.Weather}>
         <Text>날씨 위젯 들어올거라누 ㅋ</Text>
