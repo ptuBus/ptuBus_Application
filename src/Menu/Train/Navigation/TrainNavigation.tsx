@@ -11,6 +11,7 @@ export default function TrainStackNavigation() {
             <Stack.Screen
                 name="기차"
                 component={TrainScreen}
+                initialParams={{endStationName: '서울'}}
                 options={{
                     headerStyle: {
                         backgroundColor: '#F9F9F9',

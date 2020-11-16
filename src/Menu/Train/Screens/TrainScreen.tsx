@@ -2,17 +2,16 @@ import React from 'react';
 import {SafeAreaView, StyleSheet, View} from 'react-native';
 import ArrivalButton from "../../../Components/Buttons/ArrivalButton";
 import InquiryButton from "../../../Components/Buttons/InquiryButton";
+import DepartureButton from "../../../Components/Buttons/DepartureButton";
 
-export default function TrainScreen({navigation}) {
+export default function TrainScreen({navigation, route}) {
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.card}>
                 <View style={styles.selectDest}>
+                    <DepartureButton />
                     <ArrivalButton
-                        title={'평택'}
-                    />
-                    <ArrivalButton
-                        title={'서울'}
+                        title={route.params.endStationName}
                     />
                 </View>
                 <View style={styles.selectTime}>
