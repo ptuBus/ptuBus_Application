@@ -6,7 +6,7 @@ const Stack = createStackNavigator();
 
 export default function ExpressBusNavigation() {
     return (
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{headerBackTitleVisible: false}}>
             <Stack.Screen
                 name="고속/시외버스"
                 component={ExpressBusScreen}
@@ -14,7 +14,6 @@ export default function ExpressBusNavigation() {
                     headerStyle: {
                         backgroundColor: '#F9F9F9',
                     },
-                    headerShown: false,
                 }}
             />
         </Stack.Navigator>

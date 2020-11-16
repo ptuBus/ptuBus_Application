@@ -5,6 +5,7 @@ import SchoolBusNavigation from "../../../Menu/SchoolBus/Navigation/SchoolBusNav
 import ExpressBusNavigation from "../../../Menu/ExpressBus/Navigation/ExpressBusNavigation";
 import CityBusNavigation from "../../../Menu/CityBus/Navigation/CityBusNavigation";
 import SubwayNavigation from "../../../Menu/Subway/Navigation/SubwayNavigation";
+import TrainStackNavigation from "../../../Menu/Train/Navigation/TrainNavigation";
 
 const Stack = createStackNavigator();
 
@@ -32,6 +33,7 @@ export default function HomeTabScreen() {
                     headerStyle: {
                         backgroundColor: '#F9F9F9',
                     },
+                    headerShown: false,
                 }}
             />
             <Stack.Screen
@@ -41,6 +43,7 @@ export default function HomeTabScreen() {
                     headerStyle: {
                         backgroundColor: '#F9F9F9',
                     },
+                    headerShown: false,
                 }}
             />
             <Stack.Screen
@@ -50,6 +53,16 @@ export default function HomeTabScreen() {
                     headerStyle: {
                         backgroundColor: '#F9F9F9',
                     },
+                }}
+            />
+            <Stack.Screen
+                name="기차"
+                component={TrainStackNavigation}
+                options={{
+                    headerStyle: {
+                        backgroundColor: '#F9F9F9',
+                    },
+                    headerShown: false,
                 }}
             />
         </Stack.Navigator>
