@@ -5,7 +5,7 @@ import Modal, {
     ModalContent,
 } from 'react-native-modals';
 
-export default function ButtonModal({ show, onClose }) {
+export default function AlarmSettingModal({ show, onClose }) {
     return (
               <View>
                   <Modal.BottomModal
