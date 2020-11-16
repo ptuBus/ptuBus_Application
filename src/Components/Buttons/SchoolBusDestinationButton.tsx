@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {View, StyleSheet, TouchableOpacity, Text, Image} from 'react-native';
 import AlarmSettingModal from "../Modals/AlarmSettingModal";
 
-export default function SchoolBusDestinationButton(props) {
+export default function SchoolBusDestinationButton(props, {navigation: navigate}) {
     const [showModal, setShowModal] = useState(false);
     const onClose = () => setShowModal(false);
 
@@ -21,7 +21,12 @@ export default function SchoolBusDestinationButton(props) {
                         {props.startStationName}{' '}
                     </Text>
                 </View>
-                <AlarmSettingModal show={showModal} onClose={onClose}/>
+                <AlarmSettingModal
+                    show={showModal}
+                    onClose={onClose}
+                    schedule={props.schedule}
+                    startStationName={props.startStationName}
+                />
             </TouchableOpacity>
 
             <TouchableOpacity

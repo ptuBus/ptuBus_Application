@@ -7,7 +7,7 @@ import {
     ScrollView,
     View
 } from 'react-native';
-import SchoolBusFlatList from "../../../Components/SchoolBusFlatList";
+import SchoolBusFlatList from "../../../Components/FlatList/SchoolBusFlatList";
 export default function SchoolBusDownScreen() {
     return(
         <SchoolBusFlatList

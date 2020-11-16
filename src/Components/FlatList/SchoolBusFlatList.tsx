@@ -7,7 +7,7 @@ import {
     ScrollView,
     View
 } from 'react-native';
-import SchoolBusDestinationButton from "./Buttons/SchoolBusDestinationButton";
+import SchoolBusDestinationButton from "../Buttons/SchoolBusDestinationButton";
 
 export default function SchoolBusFlatList({url}) {
     const [isLoading, setLoading] = useState(true);

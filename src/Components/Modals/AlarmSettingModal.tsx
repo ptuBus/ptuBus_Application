@@ -1,11 +1,16 @@
 import React, {useEffect, useState} from 'react';
-import {View, StyleSheet, TouchableOpacity, Text, Image} from 'react-native';
+import {View, StyleSheet, TouchableOpacity, Text, Image, Button} from 'react-native';
 import Modal, {
     ModalTitle,
     ModalContent,
 } from 'react-native-modals';
 
-export default function AlarmSettingModal({ show, onClose }) {
+export default function AlarmSettingModal({ show, onClose, schedule, startStationName }) {
+    // const defaultProps = {
+    //     schedule: 'sss',
+    //     startStationName: 'sss',
+    // };
+
     return (
               <View>
                   <Modal.BottomModal
@@ -26,13 +31,13 @@ export default function AlarmSettingModal({ show, onClose }) {
                               backgroundColor: 'yellow',
                           }}>
                           <View style={styles.settingAlarmLayout}>
-                              <Text style={styles.alarm}>알람주기</Text>
+                              <Text style={styles.alarm}>{startStationName}</Text>
                           </View>
                           <View style={styles.settingAlarmLayout}>
-                              <Text style={styles.alarm}>다시알람</Text>
+                              <Text style={styles.alarm}>{schedule}</Text>
                           </View>
                           <View style={styles.settingAlarmLayout}>
-                              <Text style={styles.alarm}>푸시알람</Text>
+                              <Button title={'푸쉬알람'}  onPress={onClose}/>
                           </View>
                       </ModalContent>
                   </Modal.BottomModal>
