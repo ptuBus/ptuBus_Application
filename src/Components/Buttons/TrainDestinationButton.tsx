@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import DestinationStationFlatLIst from "../FlatList/DestinationStationFlatLIst";
 
-export default function TrainDestinationButton({navigation}) {
+export default function TrainDestinationButton() {
     return (
         <DestinationStationFlatLIst url={'https://ptubus.com/server/train/station/'}/>
     );
