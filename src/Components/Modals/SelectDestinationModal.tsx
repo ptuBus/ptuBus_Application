@@ -3,6 +3,7 @@ import {View, StyleSheet, Text, TextInput} from 'react-native';
 import Modal, {
     ModalContent,
 } from 'react-native-modals';
+import TrainDestinationButton from "../Buttons/TrainDestinationButton";
 
 export default function SelectDestinationModal({ show, onClose }) {
     return (
@@ -27,7 +28,7 @@ export default function SelectDestinationModal({ show, onClose }) {
                     </View>
                     <View style={styles.DataLayer}>
                         <View style={styles.DataButtonLayer}>
-                            <Text>데이터 버튼 레이어</Text>
+                            <TrainDestinationButton />
                         </View>
                         <View style={styles.DataSearchLayer}>
                             <Text>데이터 선택 레이어</Text>

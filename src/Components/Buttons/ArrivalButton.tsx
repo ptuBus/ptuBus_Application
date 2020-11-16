@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 import SelectDestinationModal from "../Modals/SelectDestinationModal";
 
-export default function ArrivalButton(props){
+export default function ArrivalButton(props,{navigation}){
     const defaultProps = {
         subtitle: '도착',
         titleColor: '#0012AF',
