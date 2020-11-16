@@ -5,7 +5,6 @@ export default function InquiryButton(props){
     const defaultProps = {
         titleColor: '#FFF',
         buttonColor: '#2195FF',
-        title: '조회하기',
         width: '',
         height: '',
     };
@@ -15,7 +14,7 @@ export default function InquiryButton(props){
                 width: props.width, height: props.height}]}
             onPress={props.onPress}>
             <Text style={[styles.title, {color: defaultProps.titleColor}]}>
-                {defaultProps.title}
+                {props.title}
             </Text>
         </TouchableOpacity>
     );
