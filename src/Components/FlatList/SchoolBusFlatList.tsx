@@ -7,7 +7,6 @@ import {
     ScrollView,
     View
 } from 'react-native';
-// import SchoolBusDestinationButton from "../../../Components/Buttons/SchoolBusDestinationButton";
 import SchoolBusDestinationButton from "./Buttons/SchoolBusDestinationButton";
 
 export default function SchoolBusFlatList({url}) {
