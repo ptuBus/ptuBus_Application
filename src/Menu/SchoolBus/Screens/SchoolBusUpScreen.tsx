@@ -7,7 +7,7 @@ import {
     ScrollView,
     View,
 } from 'react-native';
-import SelectDestinationButton from "../../../Components/Buttons/SelectDestinationButton";
+import SchoolBusDestinationButton from "../../../Components/Buttons/SchoolBusDestinationButton";
 
 export default function SchoolBusUpScreen() {
     const [isLoading, setLoading] = useState(true);
@@ -34,7 +34,7 @@ export default function SchoolBusUpScreen() {
                         keyExtractor={({id}, index) => id}
                         renderItem={({item}) => (
                             <View style={styles.itemView}>
-                                <SelectDestinationButton
+                                <SchoolBusDestinationButton
                                     schedule={item.schedule}
                                     startStationName={item.startStationName}
                                     endStationName={item.endStationName}

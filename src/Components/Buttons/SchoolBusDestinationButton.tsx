@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {View, StyleSheet, TouchableOpacity, Text, Image} from 'react-native';
 import ButtonModal from "./ButtonModal";
 
-export default function SelectDestinationButton(props) {
+export default function SchoolBusDestinationButton(props) {
     const [showModal, setShowModal] = useState(false);
     const onClose = () => setShowModal(false);
 
