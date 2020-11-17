@@ -9,10 +9,10 @@ import {
     Text,
     Alert
 } from 'react-native';
-import DestinationStationFlatLIst from "../FlatList/DestinationStationFlatLIst";
+import DestinationStationFlatList from "../FlatList/DestinationStationFlatLIst";
 
 export default function TrainDestinationButton() {
     return (
-        <DestinationStationFlatLIst url={'https://ptubus.com/server/train/station/'}/>
+        <DestinationStationFlatList url={'https://ptubus.com/server/train/station/'} />
     );
 }
