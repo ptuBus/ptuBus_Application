@@ -43,10 +43,10 @@ export default function HomeScreen({navigation: {navigate}}) {
         <MenuButton />
       </View>
       <View style={styles.Weather}>
-        <Text>날씨 위젯 들어올거라누 ㅋ</Text>
+        <Text>날씨 위젯</Text>
       </View>
       <View style={styles.Advertise}>
-        <Text>광고 넣을거라누 ㅋ</Text>
+        <Text>광고</Text>
       </View>
     </SafeAreaView>
   );

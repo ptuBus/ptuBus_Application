@@ -12,8 +12,8 @@ export default function App() {
       <NavigationContainer>
         <Tab.Navigator
             initialRouteName="Home"
-            activeColor="black"
-            inactiveColor="blue"
+            activeColor="blue"
+            inactiveColor="black"
             barStyle={{backgroundColor: '#fff'}}>
           <Tab.Screen name="Home" component={HomeNavigation} />
           <Tab.Screen name="Favorite" component={FavoriteScreen} />
